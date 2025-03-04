@@ -59,18 +59,19 @@ export default function NewChallenge({ onDone }) {
         </p>
 
         <motion.ul
-        variants={{
-          visible: { transition: { staggerChildren: 0.5 } }
-        }}
-        id="new-challenge-images">
+          variants={{
+            visible: { transition: { staggerChildren: 0.5 } },
+          }}
+          id="new-challenge-images"
+        >
           {images.map((image) => (
             <motion.li
               variants={{
                 hidden: { opacity: 0, scale: 0.5 },
                 visible: {
                   opacity: 1,
-                  scale: 1,
-                  transition: { type: "spring" },
+                  scale: [0.8, 1.3, 1],
+                  transition: {}
                 },
               }}
               key={image.alt}
